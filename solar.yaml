@@ -85,7 +85,7 @@ variables:
     {{ ns.devices }}
   power_sensor: !input power_source
   power_level: >-
-    {{ (1000 * states[power_sensor].state) | int(0) | abs }}
+    {{ states[power_sensor].state | int(0) | abs }}
   threshold_low: !input threshold_low
   threshold_high: !input threshold_high
   power_level_icon: >-
