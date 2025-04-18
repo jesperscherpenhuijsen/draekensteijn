@@ -83,9 +83,9 @@ variables:
       {% set ns.devices = ns.devices + [ device ~ '/custom/solar_power'] %}
     {%- endfor %}
     {{ ns.devices }}
-  power_sensor: 1000 * !input power_source
+  power_sensor: !input power_source
   power_level: >-
-    {{ states[power_sensor].state | int(0) | abs }}
+    {{ states[power_sensor].state * 1000 | int(0) | abs }}
   threshold_low: !input threshold_low
   threshold_high: !input threshold_high
   power_level_icon: >-
