@@ -113,13 +113,13 @@ variables:
   threshold_low: !input threshold_low
   threshold_high: !input threshold_high
   power_level_icon: >-
-    {%- if power_level > threshold_high %}{{54156}}{%- endif %}
-    {%- if (power_level <= threshold_high) and (power_level > threshold_low) %}{{50557}}{%- endif %}
-    {%- if power_level <= threshold_low %}{{50546}}{%- endif %}
+    {%- if power_level > threshold_high %}{icon_high}{%- endif %}
+    {%- if (power_level <= threshold_high) and (power_level > threshold_low) %}{icon_medium}{%- endif %}
+    {%- if power_level <= threshold_low %}{icon_low}{%- endif %}
   power_level_color: >-
-    {%- if power_level > threshold_high %}{{"#04FE04"}}{%- endif %}
-    {%- if (power_level <= threshold_high) and (power_level > threshold_low) %}{{"#FCFEFC"}}{%- endif %}
-    {%- if power_level <= threshold_low %}{{"#FF4E1A"}}{%- endif %}
+    {%- if power_level > threshold_high %}{colour_high}{%- endif %}
+    {%- if (power_level <= threshold_high) and (power_level > threshold_low) %}{colour_medium}{%- endif %}
+    {%- if power_level <= threshold_low %}{colour_low}{%- endif %}
   power_level_text: >-
     {%- if power_level > 1000  %}{{ ((power_level | float(default=0)) / 1000) | round(1)}} kW{%- else %}{{power_level | round(0)}} W{%- endif %}
   skip_if_zero_watts: !input skip_if_zero_watts
