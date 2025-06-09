@@ -28,38 +28,26 @@ blueprint:
     icon_high:
       name: Icon High
       description: Icon to indicate High production
-      selector:
-        string:
       default: "54156"
     icon_medium:
       name: Icon Medium
       description: Icon to indicate Medium production
-      selector:
-        string:
       default: "50557"
     icon_low:
       name: Icon Low
       description: Icon to indicate Low production
-      selector:
-        string:
       default: "50546"
     colour_high:
       name: Colour High
       description: Colour to indicate High production
-      selector:
-        string:
       default: "#04FE04"
     colour_medium:
       name: Colour Medium
       description: Colour to indicate Medium production
-      selector:
-        string:
       default: "#FCFEFC"
     colour_low:
       name: Colour Low
       description: Colour to indicate Low production
-      selector:
-        string:
       default: "#FF4E1A"
     threshold_high:
       name: Threshold for high solar production (W)
