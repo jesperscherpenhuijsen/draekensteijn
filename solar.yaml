@@ -110,7 +110,7 @@ variables:
   power_sensor: !input power_source
   icon_high: !input icon_high
   icon_medium: !input icon_medium
-  icon_low: !input icon_high
+  icon_low: !input icon_low
   colour_high: !input colour_high
   colour_medium: !input colour_medium
   colour_low: !input colour_low
